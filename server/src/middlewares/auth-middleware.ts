@@ -33,6 +33,7 @@ export const AuthMiddleware: RequestHandler = async (req, res, next) => {
     }
 
     req.user = existingCustomer;
+    next();
   } catch (error) {
     next(error);
   }

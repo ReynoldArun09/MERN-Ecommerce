@@ -78,7 +78,7 @@ describe("Auth controller testing", () => {
         email: "mockEmail@example.com",
         password: "mockPassword1234A$",
       });
-      console.log(response.body);
+
       expect(response.status).toBe(201);
       expect(response.body.success).toBe(true);
       expect(response.body.message).toBe(SuccessMessages.SIGNUP_SUCCESS);
@@ -91,7 +91,7 @@ describe("Auth controller testing", () => {
         email: "mockEmail@example.com",
         password: "mockPassword1234A$",
       });
-      console.log(response.body);
+
       expect(response.status).toBe(400);
       expect(response.body.message).toBe(ErrorMessages.USER_ALREADY_EXISTS);
     });

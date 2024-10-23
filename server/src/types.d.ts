@@ -13,6 +13,16 @@ export interface ICustomer extends Document {
   role: "customer" | "admin";
 }
 
+export interface IProduct extends Document {
+  name: string;
+  slug: string;
+  price: number;
+  description: string;
+  image: string;
+  category: string;
+  isFeatured: boolean;
+}
+
 type JWTPayloadType = Omit<ICustomer, "password">;
 
 declare global {
