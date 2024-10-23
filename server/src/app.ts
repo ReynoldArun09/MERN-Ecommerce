@@ -3,7 +3,7 @@ import helmet from "helmet";
 import cookieParser from "cookie-parser";
 import cors from "cors";
 import { ParsedEnvVariables } from "./config";
-import { authRoute, productRoute } from "./routes";
+import { authRoute, cartRoute, couponRoute, productRoute } from "./routes";
 import { ErrorMiddleware } from "./middlewares";
 
 const app: Application = express();
@@ -21,6 +21,8 @@ app.use(cookieParser());
 
 app.use("/api/v1/auth", authRoute);
 app.use("/api/v1/product", productRoute);
+app.use("/api/v1/coupon", couponRoute);
+app.use("/api/v1/cart", cartRoute);
 
 app.use(ErrorMiddleware);
 

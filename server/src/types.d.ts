@@ -23,6 +23,14 @@ export interface IProduct extends Document {
   isFeatured: boolean;
 }
 
+export interface ICoupon extends Document {
+  code: string;
+  discountPercentage: number;
+  expiratonDate: Date;
+  isActive: boolean;
+  userId: ObjectId;
+}
+
 type JWTPayloadType = Omit<ICustomer, "password">;
 
 declare global {

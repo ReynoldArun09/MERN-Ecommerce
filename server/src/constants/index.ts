@@ -20,6 +20,8 @@ export const ErrorMessages = {
   INTERNAL_SERVER_ERROR: "Oops! Something went wrong. Please try again later.",
   NO_FEATURED_PRODUCTS_FOUND: "No featured products found.",
   PRODUCT_NOT_FOUND: "Product not found.",
+  INVALID_COUPON: "Coupon code is invalid",
+  COUPON_EXPIRED: "Coupon code is expired",
 };
 
 export enum HttpStatusCode {
